@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table} from 'antd';
+import { Table, Tag} from 'antd';
+
 
 const columns = [
   {
@@ -22,10 +23,25 @@ const columns = [
     dataIndex: 'author',
     key: 'author',
   },
-  {
+    {
     title: 'Tags',
-    dataIndex: 'tags',
     key: 'tags',
+    dataIndex: 'tags',
+    render: tags => (
+      <span>
+        {tags ? tags.map(tag => {
+          let color = tag.length > 5 ? 'geekblue' : 'green';
+          if (tag === 'loser') {
+            color = 'volcano';
+          }
+          return (
+            <Tag color={color} key={tag}>
+              {tag.toUpperCase()}
+            </Tag>
+          );
+        }): <Tag> </Tag>}
+      </span>
+    ),
   },
   {
     title: 'Created At',
@@ -38,26 +54,7 @@ const columns = [
     key: 'updated_at',
   }
 
-//   {
-//     title: 'Tags',
-//     key: 'tags',
-//     dataIndex: 'tags',
-//     render: tags => (
-//       <span>
-//         {tags.map(tag => {
-//           let color = tag.length > 5 ? 'geekblue' : 'green';
-//           if (tag === 'loser') {
-//             color = 'volcano';
-//           }
-//           return (
-//             <Tag color={color} key={tag}>
-//               {tag.toUpperCase()}
-//             </Tag>
-//           );
-//         })}
-//       </span>
-//     ),
-//   }
+
 ];
 const onRowClick = (record, index,event) => {
     if (typeof window !== 'undefined') {
@@ -67,10 +64,15 @@ const onRowClick = (record, index,event) => {
 }
 
 const PostsTable = (props) => {
+    if(props !== null){
+        props.data.map((object) => {
+            return object.tags = object.tags ? object.tags.split(","): [];
+        })
+    }
     
     return (
-        <Table columns={columns} dataSource={props.data} rowKey="id" onRow={(record, index) => ({
-          onClick: (event) => { onRowClick(record, index, event) } 
+        <Table columns={columns} dataSource={props.data} pagination={{defaultPageSize: 10}} rowKey="id" onRow={(record, index) => ({
+        onClick: (event) => { onRowClick(record, index, event) } 
         })}/>
     );
 }

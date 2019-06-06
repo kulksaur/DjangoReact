@@ -135,3 +135,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ]
 }
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)

@@ -1,7 +1,10 @@
 import React from 'react';
 import PostsTable from '../components/PostsTable';
 import axios from 'axios';
+import CreatePostForm from '../components/CreatePostForm';
+import { Collapse } from 'antd';
 
+const Panel = Collapse.Panel;
 
 class PostsView extends React.Component{
 
@@ -20,7 +23,16 @@ class PostsView extends React.Component{
     }
     render(){
         return(
-            <PostsTable data={this.state.posts} />
+            <div>
+                <PostsTable data={this.state.posts} />
+                <br /> 
+                <Collapse>
+                    <Panel header="Create a new post">
+                        <CreatePostForm requestMethod ='post' postID={null} btnTxt="Create"/>
+                    </Panel>
+                </Collapse>
+            </div>
+            
         );
     }
 }
