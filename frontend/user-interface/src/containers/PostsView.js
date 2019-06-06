@@ -15,6 +15,10 @@ class PostsView extends React.Component{
     componentDidMount(){
         axios.get('http://localhost:8000/api/')
         .then(res => {
+            res.data.map((post) => {
+                post.description = post.description.substring(0,50)+"..........";
+                return post.tags = post.tags.split(",");
+            });
             this.setState({
                 posts: res.data
             });

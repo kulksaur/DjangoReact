@@ -11,7 +11,7 @@ const columns = [
   {
     title: 'Title',
     dataIndex: 'title',
-    key: 'title',
+    key: 'title'
   },
   {
     title: 'Description',
@@ -54,7 +54,6 @@ const columns = [
     key: 'updated_at',
   }
 
-
 ];
 const onRowClick = (record, index,event) => {
     if (typeof window !== 'undefined') {
@@ -64,14 +63,8 @@ const onRowClick = (record, index,event) => {
 }
 
 const PostsTable = (props) => {
-    if(props !== null){
-        props.data.map((object) => {
-            return object.tags = object.tags ? object.tags.split(","): [];
-        })
-    }
-    
     return (
-        <Table columns={columns} dataSource={props.data} pagination={{defaultPageSize: 10}} rowKey="id" onRow={(record, index) => ({
+        <Table columns={columns} style={{'overflow':'wrap'}} dataSource={props.data} pagination={{defaultPageSize: 10}} rowKey="id" onRow={(record, index) => ({
         onClick: (event) => { onRowClick(record, index, event) } 
         })}/>
     );

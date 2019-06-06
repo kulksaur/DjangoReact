@@ -18,7 +18,8 @@ class CreatePostForm extends React.Component {
                 return axios.put(`http://localhost:8000/api/${postID}/`, {
                     title: title,
                     description: description,
-                    author:author
+                    author:author,
+                    tags: tags
                 }).then(res => {
                     console.log(res);
                 }).catch(err => console.log(err));
@@ -31,7 +32,6 @@ class CreatePostForm extends React.Component {
                 }).then(res => { 
                     console.log(res);
                 }).catch(err => console.log(err));
-            
         }
 
     }
@@ -41,16 +41,16 @@ class CreatePostForm extends React.Component {
         <div>
             <Form  onSubmit={(e) => this.handleSubmit(e, this.props.requestMethod, this.props.postID)}> 
             <Form.Item label="Title" >
-                <Input name="title" placeholder="Please enter a title" />
+                <Input required name="title" placeholder="Please enter a title" />
             </Form.Item>
             <Form.Item label="Description" >
-            <TextArea name="description" rows={4} placeholder="Please enter a description" />
+            <TextArea required name="description" rows={4} placeholder="Please enter a description" />
             </Form.Item>
             <Form.Item label="Author">
-                <Input  name="author" placeholder="Please enter a author" />
+                <Input  required name="author" placeholder="Please enter a author" />
             </Form.Item>
             <Form.Item label="Tags">
-                <Input  name="tags" placeholder="Enter comma after each value" />
+                <Input  required name="tags" placeholder="Enter comma after each value" />
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" >{this.props.btnTxt}</Button>
