@@ -12,7 +12,7 @@ class PostDetailView extends React.Component{
     componentDidMount(){
         const postID = this.props.match.params.postID;
 
-        axios.get(`http://localhost:8000/api/${postID}`)
+        axios.get(`http://localhost:8000/api/${postID}/`)
         .then(res => {
             this.setState({
                 post: res.data
