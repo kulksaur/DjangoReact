@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout;
 const CustomLayout = (props) => {
     return (
         <Layout className="layout">
-            <Header>
+            <Header style={{ height:'4rem', position:'fixed', width:'100%',zIndex:'100' }}>
             <Menu
                 theme="dark"
                 mode="horizontal"
@@ -22,7 +22,7 @@ const CustomLayout = (props) => {
             </Menu>
             </Header>
             <br />
-            <Content style={{ padding: '0 50px' }}>
+            <Content style={{ padding: '50px 50px 0px 50px ' }}>
             
             <br />
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
