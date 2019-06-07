@@ -30,9 +30,9 @@ A challenge on implementing CRUD operations using Django and React
   <p> Now we will do the migrations which are required for your initial set-up. Run the following commands by navigating to your 'backend/src' folder <p>
   
   ```python manage.py makemigrations
-  
-     python manage.py migrate
   ```
+  ```python manage.py migrate
+   ```
   
   <p> Now we have to import the initial data to our database, this can be done using fixtures which I have created in 'backend/src/posts/fixtures/' in a "fixtures.json" file. Fixtures is nothing but a json representation of your initial data according to your model specified in django. This helps to dump initial data into database' </p>
   
