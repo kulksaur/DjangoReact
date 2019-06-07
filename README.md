@@ -22,29 +22,24 @@ A challenge on implementing CRUD operations using Django and React
   <p> Its time to install all the dependencies for our Django (backend) server <p> 
   <p> Navigate to the folder 'backend/' and run the following command<p>
     
-    ```pip install
-    ```
+    ```pip install```
     
   <p> This will install all the dependencies </p>
   
   <p> Now we will do the migrations which are required for your initial set-up. Run the following commands by navigating to your 'backend/src' folder <p>
   
-  ```python manage.py makemigrations
-  ```
-  ```python manage.py migrate
-   ```
+  ```python manage.py makemigrations```
+  ```python manage.py migrate```
   
   <p> Now we have to import the initial data to our database, this can be done using fixtures which I have created in 'backend/src/posts/fixtures/' in a "fixtures.json" file. Fixtures is nothing but a json representation of your initial data according to your model specified in django. This helps to dump initial data into database' </p>
   
   <p> To dump the data we will run the following command by navigating to your 'backend/src/' <p>
   
-  ```python manage.py loadddata fixtures
-  ```
+  ```python manage.py loadddata fixtures```
   
   <p> Now its the time to start our django server. we can do it by running following command <p>
   
-  ```python manage.py runserver
-  ```
+  ```python manage.py runserver```
   
   <p> The server will be started and available on 'http://localhost:8000/
   
@@ -54,15 +49,11 @@ A challenge on implementing CRUD operations using Django and React
   
   <p> Front end is little bit easy to start, we just need to install the dependencies by navigating to 'frontend/user-interface' and executing the following command</p>
   
-  ```
-    npm install
-  ```
+  ```npm install```
   
   <p> Now we can start the application by executing the following command <p>
   
-  ```
-    npm start
-  ```
+  ```npm start```
   
   
   
