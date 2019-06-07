@@ -24,7 +24,7 @@ A challenge on implementing CRUD operations using Django and React
   <p> Its time to install all the dependencies for our Django (backend) server <p> 
   <p> Navigate to the folder 'backend/' and run the following command<p>
     
-    ```pip install```
+    pip instal
    
     
   <p> This will install all the dependencies </p>
