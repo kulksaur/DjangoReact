@@ -8,21 +8,21 @@ const CustomLayout = (props) => {
     return (
         <Layout className="layout">
             <Header>
-            <div className="logo" />
             <Menu
                 theme="dark"
                 mode="horizontal"
                 defaultSelectedKeys={['2']}
                 style={{ lineHeight: '64px' }}>
+                <Affix>
+                    <Button type="default">
+                        <Link to="/">All Posts</Link>
+                    </Button>
+                </Affix>
             </Menu>
             </Header>
             <br />
             <Content style={{ padding: '0 50px' }}>
-            <Affix>
-                <Button type="default">
-                    <Link to="/">All Posts</Link>
-                </Button>
-            </Affix>
+            
             <br />
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
                 {props.children}
