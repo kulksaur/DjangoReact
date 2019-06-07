@@ -9,7 +9,7 @@ A challenge on implementing CRUD operations using Django and React
   
   ```git clone https://github.com/kulksaur/DjangoReact.git```
   
-<h3> Steps to start the Django server and react.js application <h3>
+<h2> Steps to start the Django server and react.js application <h2>
  
  <p> If you check the repository, we have 2 main folders named 'backend' and 'frontend'. And now we will walkthrough on 
      initial set-up to get started. </p>
@@ -22,13 +22,15 @@ A challenge on implementing CRUD operations using Django and React
   <p> Its time to install all the dependencies for our Django (backend) server <p> 
   <p> Navigate to the folder 'backend/' and run the following command<p>
     
-    ```pip install```
+    ```pip install
+    ```
     
   <p> This will install all the dependencies </p>
   
   <p> Now we will do the migrations which are required for your initial set-up. Run the following commands by navigating to your 'backend/src' folder <p>
   
   ```python manage.py makemigrations
+  
      python manage.py migrate
   ```
   
@@ -36,14 +38,30 @@ A challenge on implementing CRUD operations using Django and React
   
   <p> To dump the data we will run the following command by navigating to your 'backend/src/' <p>
   
-  ```python manage.py loadddate fixtures```
+  ```python manage.py loadddate fixtures
+  ```
   
   <p> Now its the time to start our django server. we can do it by running following command <p>
   
-  ```python manage.py runserver```
+  ```python manage.py runserver
+  ```
   
   <p> The server will be started and available on 'http://localhost:8000/
   
+  
+  <h3> Starting the React.js (Frontend) Application </h3>
+  
+  <p> Front end is little bit easy to start, we just need to install the dependencies by navigating to 'frontend/user-interface' and executing the following command</p>
+  
+  ```
+    npm install
+  ```
+  
+  <p> Now we can start the application by executing the following command <p>
+  
+  ```
+    npm start
+  ```
   
   
   
