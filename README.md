@@ -22,26 +22,29 @@ A challenge on implementing CRUD operations using Django and React
   <p> Please change your mongoDB instance URL (Host), and you may keep the database same. Also, if you notice any connection errors with database, please add USER and PASSWORD fields of your mondoDB User <p/>
   
   <p> Its time to install all the dependencies for our Django (backend) server <p> 
-  <p> Navigate to the folder 'backend/' and run the following command<p>
-    
-    pip install
-   
-    
-  <p> This will install all the dependencies </p>
+  <p> Navigate to the folder 'backend/src' and run the following command<p>
+  <p> *Now I assume you have installed pipenv, and we will use it to create environment and install everything*</p>
+  <p> Run the following commands in 'backend/src'</p>
   
-  <p> Now we will do the migrations which are required for your initial set-up. Run the following commands by navigating to your 'backend/src' folder <p>
+    pipenv install 
+    pipenv shell
+    
+  <p> You will enter inside a shell from which we will do the steps given below </p>
   
-  ```python manage.py makemigrations```
+   <p> Now we will need to apply our database structure to the Database Instance, we use migrate command for that. So execute following: <p>
   
   ```python manage.py migrate```
   
+  <p> Check your database - you should be having a database created in it </p>
+  
   <p> Now we have to import the initial data to our database, this can be done using fixtures which I have created in 'backend/src/posts/fixtures/' in a "fixtures.json" file. Fixtures is nothing but a json representation of your initial data according to your model specified in django. This helps to dump initial data into database' </p>
   
-  <p> To dump the data we will run the following command by navigating to your 'backend/src/' <p>
+  <p> To dump the data we will run the following command from your pipenv shell<p>
   
-  ```python manage.py loadddata fixtures```
+  ```python manage.py loaddata fixtures.json```
   
-  <p> Now its the time to start our django server. we can do it by running following command <p>
+  
+  <p> Now its the time to start our django server. we can do it by running following command through the same shell<p>
   
   ```python manage.py runserver```
   
@@ -59,6 +62,7 @@ A challenge on implementing CRUD operations using Django and React
   
   ```npm start```
   
+  <p> The application will be available on http://localhost:3000/
   
   
   
