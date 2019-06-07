@@ -14,7 +14,7 @@ A challenge on implementing CRUD operations using Django and React
  <p> If you check the repository, we have 2 main folders named 'backend' and 'frontend'. And now we will walkthrough on 
      initial set-up to get started. </p>
      
- <h3> Starting the Django (Backend) Server <h3>
+ <h3> Starting the Django (Backend) Server </h3>
   <p> As for the use-case, I have used mongoDB to store our data, and Django byDefault uses SqlLite. So I have changed the database which you can find in our environment variables file which is 'custom_settings.py' in path 'backend/src/djangoReact/'. <p>
   
   <p> Please change your mongoDB instance URL (Host), and you may keep the database same. Also, if you notice any connection errors with database, please add USER and PASSWORD fields of your mondoDB User <p/>
