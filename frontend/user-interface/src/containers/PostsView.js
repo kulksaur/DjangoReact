@@ -16,7 +16,9 @@ class PostsView extends React.Component{
         axios.get('http://localhost:8000/api/')
         .then(res => {
             res.data.map((post) => {
-                post.description = post.description.substring(0,50)+"..........";
+                if(post.description.length > 150){
+                    post.description = post.description.substring(0,50)+"..........";
+                }
                 return post.tags = post.tags.split(",");
             });
             this.setState({

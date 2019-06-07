@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Button, Affix } from 'antd';
 import { Link } from 'react-router-dom';
 const { Header, Content, Footer } = Layout;
 
@@ -16,10 +16,14 @@ const CustomLayout = (props) => {
                 style={{ lineHeight: '64px' }}>
             </Menu>
             </Header>
+            <br />
             <Content style={{ padding: '0 50px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item><Link to="/">All Posts/</Link></Breadcrumb.Item>
-            </Breadcrumb>
+            <Affix>
+                <Button type="default">
+                    <Link to="/">All Posts</Link>
+                </Button>
+            </Affix>
+            <br />
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
                 {props.children}
             </div>

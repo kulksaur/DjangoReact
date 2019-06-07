@@ -12,6 +12,12 @@ class CreatePostForm extends React.Component {
         const description = e.target.elements.description.value;
         const author = e.target.elements.author.value;
         const tags = e.target.elements.tags.value;
+        var today = new Date();
+        var dd = String(today.getDate());
+        var mm = String(today.getMonth() + 1); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '.' + dd + '.' + yyyy;
 
         switch( requestMethod ){
             case 'put':
@@ -19,7 +25,8 @@ class CreatePostForm extends React.Component {
                     title: title,
                     description: description,
                     author:author,
-                    tags: tags
+                    tags: tags,
+                    updated_at: today
                 }).then(res => {
                     console.log(res);
                 }).catch(err => console.log(err));
@@ -28,7 +35,8 @@ class CreatePostForm extends React.Component {
                     title: title,
                     description: description,
                     author:author,
-                    tags:tags
+                    tags:tags,
+                    created_at: today
                 }).then(res => { 
                     console.log(res);
                 }).catch(err => console.log(err));

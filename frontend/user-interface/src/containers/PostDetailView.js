@@ -39,7 +39,7 @@ class PostDetailView extends React.Component{
             <div>   
                 <Card title={this.state.post.title}>
                     <p>{this.state.post.description}</p>
-                    <p>{this.state.post.author}</p>
+                    <b><p>Source - {this.state.post.author}</p></b>
                 </Card>
 
                 <br />
