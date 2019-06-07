@@ -20,7 +20,7 @@ class PostsView extends React.Component{
             res.data.map((post) => {
                 if(post.description.length > 150){
                     // If the description field is too big, trim it
-                    post.description = post.description.substring(0,50)+"..........";
+                    post.description = post.description.substring(0,50)+" ..........";
                 }
                 return post.tags = post.tags.split(",");
             });
