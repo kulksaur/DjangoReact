@@ -7,7 +7,9 @@ A challenge on implementing CRUD operations using Django and React
     on your system:
 <p>
   
-  ```git clone https://github.com/kulksaur/DjangoReact.git```
+  ```
+  git clone https://github.com/kulksaur/DjangoReact.git
+  ```
   
 <h2> Steps to start the Django server and react.js application <h2>
  
@@ -22,7 +24,9 @@ A challenge on implementing CRUD operations using Django and React
   <p> Its time to install all the dependencies for our Django (backend) server <p> 
   <p> Navigate to the folder 'backend/' and run the following command<p>
     
-    ```pip install```
+    ```
+    pip install
+    ```
     
   <p> This will install all the dependencies </p>
   
