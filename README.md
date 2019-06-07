@@ -1,5 +1,5 @@
 # DjangoReact
-<h2> CRUD Operations application for Posts using Django-framework and React.js </h2>
+<h2> CRUD application for Posts using Django-framework and React.js </h2>
 
 <p> For the Designing purposes I have used Antd Library which is very popular for styling react apps, having a bunch of features in it </p>
 
@@ -18,7 +18,7 @@
  <p> If you check the repository, we have 2 main folders named 'backend' and 'frontend'. And now we will walkthrough on 
      initial set-up to get started. </p>
      
- <h3><u> Starting the Django (Backend) Server </u></h3>
+ <h3><ins> Starting the Django (Backend) Server </ins></h3>
   <p> As for the use-case, I have used mongoDB to store our data, and Django byDefault uses SqlLite. So I have changed the database which you can find in our environment variables file which is 'custom_settings.py' in path 'backend/src/djangoReact/'. <p>
   
   <p> Please change your mongoDB instance URL (Host), and you may keep the database same. Also, if you notice any connection errors with database, please add USER and PASSWORD fields of your mondoDB User <p/>
@@ -54,7 +54,7 @@
   
   <hr>
   
-  <h3><u> Starting the React.js (Frontend) Application </u></h3>
+  <h3><ins> Starting the React.js (Frontend) Application </ins></h3>
   
   <p> Front end is little bit easy to start, we just need to install the dependencies by navigating to 'frontend/user-interface' and executing the following command</p>
   
@@ -69,16 +69,16 @@
   
   <hr>
   
-  <h3><u> Running Unit Tests for Backend Server and FrontEnd Application </u></h3>
+  <h3><ins> Running Unit Tests for Backend Server and FrontEnd Application </ins></h3>
   
-  <p><u> Running Unit Tests for the Backend Server </u><p>
+  <p><ins> Running Unit Tests for the Backend Server </ins><p>
   
   <p> Make sure you are navigated to 'backend/src' folder and inside pipenv shell. 
       You will run the following command </p>
   
   ```python manage.py test```
   
-  <p><u> Running Component Unit Tests for the Front-End Application </u><p>
+  <p><ins> Running Component Unit Tests for the Front-End Application </ins><p>
   
   <p> Make sure you are navigated to 'frontend/user-interface' folder. 
       You will run the following command </p>
