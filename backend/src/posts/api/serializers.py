@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from posts.models import Post
 
+# Serializing the model
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post

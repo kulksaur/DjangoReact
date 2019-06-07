@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table, Tag} from 'antd';
 
-
+// Specifying the columns of the table
 const columns = [
   {
     title: 'Id',
@@ -31,9 +31,6 @@ const columns = [
       <span>
         {tags ? tags.map(tag => {
           let color = tag.length > 5 ? 'geekblue' : 'green';
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
           return (
             <Tag color={color} key={tag}>
               {tag.toUpperCase()}
@@ -55,6 +52,8 @@ const columns = [
   }
 
 ];
+
+// On row click route to the detailed view for that Post
 const onRowClick = (record, index,event) => {
     if (typeof window !== 'undefined') {
         window.location.href = `http://localhost:3000/${record.id}`;
@@ -62,6 +61,7 @@ const onRowClick = (record, index,event) => {
    
 }
 
+// Posts Table component to view the table of all the Posts
 const PostsTable = (props) => {
     return (
         <Table columns={columns} style={{'overflow':'wrap'}} dataSource={props.data} pagination={{defaultPageSize: 10}} rowKey="id" onRow={(record, index) => ({

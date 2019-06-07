@@ -4,8 +4,7 @@ import django.utils as utils
 import djangoReact.settings as settings
 from django import forms
 
-DATE_INPUT_FORMATS = ['%m-%d-%Y','%Y-%m-%d','%d-%m-%Y']
-
+# Creating a model for our database
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.TextField(null=False)

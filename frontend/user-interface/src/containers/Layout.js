@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const { Header, Content, Footer } = Layout;
 
 
+// Creating a wrapping layout having the menu, children components and footer
 const CustomLayout = (props) => {
     return (
         <Layout className="layout">

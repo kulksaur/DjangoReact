@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.test import APITestCase,APIRequestFactory
 
+# @Test for checking if the post operation works 
 class PostApiTest(APITestCase):
     def setUp(self):
         print("Trying to check if the post api works")

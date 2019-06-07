@@ -7,18 +7,22 @@ const { TextArea } = Input;
 
 class CreatePostForm extends React.Component {
     
+    // Function for handling the submit button
     handleSubmit(e, requestMethod, postID){
         const title = e.target.elements.title.value;
         const description = e.target.elements.description.value;
         const author = e.target.elements.author.value;
         const tags = e.target.elements.tags.value;
+        
+        // Getting the current date to either add updated_at in put
+        // or created_at in post method 
         var today = new Date();
         var dd = String(today.getDate());
         var mm = String(today.getMonth() + 1); //January is 0!
         var yyyy = today.getFullYear();
-
         today = mm + '.' + dd + '.' + yyyy;
 
+        // Switch to process either put request or post request
         switch( requestMethod ){
             case 'put':
                 return axios.put(`http://localhost:8000/api/${postID}/`, {
@@ -47,6 +51,7 @@ class CreatePostForm extends React.Component {
     render() {
         return (
         <div>
+            {/* Form for creating a new Post */}
             <Form  onSubmit={(e) => this.handleSubmit(e, this.props.requestMethod, this.props.postID)}> 
             <Form.Item label="Title" >
                 <Input required name="title" placeholder="Please enter a title" />

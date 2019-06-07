@@ -2,6 +2,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase,APIRequestFactory
 from posts.models import Post;
 
+# @Test for checking if the put operation works 
 class PutApiTest(APITestCase):
     def setUp(self):
         print("Trying to check if the put api works")
