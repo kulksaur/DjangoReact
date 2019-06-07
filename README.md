@@ -38,7 +38,7 @@ A challenge on implementing CRUD operations using Django and React
   
   <p> To dump the data we will run the following command by navigating to your 'backend/src/' <p>
   
-  ```python manage.py loadddate fixtures
+  ```python manage.py loadddata fixtures
   ```
   
   <p> Now its the time to start our django server. we can do it by running following command <p>
@@ -48,6 +48,7 @@ A challenge on implementing CRUD operations using Django and React
   
   <p> The server will be started and available on 'http://localhost:8000/
   
+  <hr>
   
   <h3> Starting the React.js (Frontend) Application </h3>
   
